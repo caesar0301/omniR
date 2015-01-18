@@ -40,12 +40,12 @@ stscale <- function(scoord, tcoord, value, alpha=0.5){
   
   df2 <- df %>%
     # scaled over time
-    group_by(s) %>%
-    mutate(
+    dplyr::group_by(s) %>%
+    dplyr::mutate(
       z.t = standardize(log10(1 + v))) %>%
     # scaled over space
-    group_by(t) %>%
-    mutate(
+    dplyr::group_by(t) %>%
+    dplyr::mutate(
       z.s = standardize(log10(1 + v)),
       z = alpha * z.s + (1-alpha) * z.t) %>%
     dplyr::select(-z.t, -z.s)
