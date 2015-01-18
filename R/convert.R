@@ -34,8 +34,8 @@ vbingrid <- function(x, y, value, FUN=mean, nx=50, ny=50, na=NA){
   
   df <- data.frame(x.int=x.int, y.int=y.int, z=value)
   dfg <- df %>%
-    group_by(x.int, y.int) %>%
-    summarise(z = FUN(z))
+    dplyr::group_by(x.int, y.int) %>%
+    dplyr::summarise(z = FUN(z))
   
   mat <- matrix(data=na, nrow=nx, ncol=ny)
   mat[cbind(dfg$x.int, dfg$y.int)] <- dfg$z
