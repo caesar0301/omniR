@@ -48,7 +48,7 @@ stscale <- function(scoord, tcoord, value, alpha=0.5){
     mutate(
       z.s = standardize(log10(1 + v)),
       z = alpha * z.s + (1-alpha) * z.t) %>%
-    select(-z.t, -z.s)
+    dplyr::select(-z.t, -z.s)
   
   df2$z
 }
