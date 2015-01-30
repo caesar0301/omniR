@@ -43,3 +43,9 @@ vbingrid <- function(x, y, value, FUN=mean, nx=50, ny=50, na=NA){
   colnames(mat) <- rangebinc(y, ny)
   mat
 }
+
+# generate a new sequence according to value groups
+seq_unique <- function(v) {
+  v.u <- unique(v)
+  sapply(v, match, v.u)
+}
