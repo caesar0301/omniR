@@ -1,12 +1,12 @@
 Package: omniR
 Type: Package
-Title: Useful Functions for Spatio-Temporal Data Analysis
+Title: Miscellaneous Functions for data analysis in OMNILab.
 Version: 0.1.1
 Date: 2014-12-24
 Author: Xiaming Chen <chenxm35@gmail.com>
 Maintainer: Xiaming Chen <chenxm35@gmail.com>
 Description: Package containing useful functions in my researches of human
-	behavior science, mostly for spatio-temporal data
+	behavior science and other data processing tasks.
 URL: https://github.com/caesar0301/omniR
 BugReports: https://github.com/caesar0301/omniR/issues
 Depends:
