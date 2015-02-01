@@ -4,9 +4,9 @@
 \name{omniR}
 \alias{omniR}
 \alias{omniR-package}
-\title{omniR: useful functions for spatio-temporal data analysis}
+\title{omniR (R data analysis at OMNILab)}
 \description{
-Package containing useful functions in my researches of human
-behavior science, mostly for spatio-temporal data
+Package containing useful functions to ease my researches of human
+behavior science and spatio-temporal data analysis.
 }
 

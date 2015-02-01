@@ -1,8 +1,9 @@
-#' omniR: useful functions for spatio-temporal data analysis
+#' omniR (R data analysis at OMNILab)
 #'
-#' Package containing useful functions in my researches of human
-#' behavior science, mostly for spatio-temporal data.
+#' Package containing useful functions to ease my researches of human
+#' behavior science and spatio-temporal data analysis.
 #' 
-#' @docType package
 #' @name omniR
+#' @docType package
+#' @import dplyr squash parallel
 NULL
