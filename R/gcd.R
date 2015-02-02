@@ -2,16 +2,22 @@
 # http://www.r-bloggers.com/great-circle-distance-calculations-in-r/
 # Convert degrees to radians
 
-deg2rad <- function(deg) {
-  deg * pi / 180
-}
+#' @export
+deg2rad <- function(deg) { deg * pi / 180 }
+#' @export
+rad2deg <- function(rad) { rad * 180 / pi }
 
-rad2deg <- function(rad) {
-  rad * 180 / pi
-}
-
-# Calculates the geodesic distance between two points specified by radian
-# latitude/longitude using the Spherical Law of Cosines (slc)
+#' Great circle distance calculation using the Spherical Law of Cosines
+#' 
+#' Calculates the geodesic distance between two points specified by radian
+#' latitude/longitude using the Spherical Law of Cosines (slc).
+#' 
+#' @param long1,lat1 Longitude and latitude coordinates of point 1.
+#' @param long2,lat2 Lontitude and latitude coordinates of point 2.
+#' @family Great Circle Distance Calculation
+#' @export
+#' @examples
+#' gcd.slc(120.0, 30.0, 120.5, 30.5)
 gcd.slc <- function(long1, lat1, long2, lat2) {
   # Earth mean radius [km]
   R <- 6371
@@ -20,8 +26,17 @@ gcd.slc <- function(long1, lat1, long2, lat2) {
   t * R
 }
 
-# Calculates the geodesic distance between two points specified by radian
-# latitude/longitude using the Haversine formula (hf)
+#' Great circle distance calculation using the Haversine formula
+#' 
+#' Calculates the geodesic distance between two points specified by radian
+#' latitude/longitude using the Haversine formula (hf).
+#' 
+#' @param long1,lat1 Longitude and latitude coordinates of point 1.
+#' @param long2,lat2 Lontitude and latitude coordinates of point 2.
+#' @family Great Circle Distance Calculation
+#' @export
+#' @examples
+#' gcd.hf(120.0, 30.0, 120.5, 30.5)
 gcd.hf <- function(long1, lat1, long2, lat2) {
   # Earth mean radius [km]
   R <- 6371
@@ -32,8 +47,18 @@ gcd.hf <- function(long1, lat1, long2, lat2) {
   R * c
 }
 
-# Calculates the geodesic distance between two points specified by radian
-# latitude/longitude using Vincenty inverse formula for ellipsoids (vif)
+#' Great circle distance calculation using Vincenty inverse formula
+#' for ellipsoids
+#' 
+#' Calculates the geodesic distance between two points specified by radian
+#' latitude/longitude using Vincenty inverse formula for ellipsoids (vif)
+#' 
+#' @param long1,lat1 Longitude and latitude coordinates of point 1.
+#' @param long2,lat2 Lontitude and latitude coordinates of point 2.
+#' @family Great Circle Distance Calculation
+#' @export
+#' @examples
+#' gcd.vif(120.0, 30.0, 120.5, 30.5)
 gcd.vif <- function(long1, lat1, long2, lat2) {
   # WGS-84 ellipsoid parameters:
   # length of major axis of the ellipsoid (radius at equator)

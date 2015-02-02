@@ -20,7 +20,9 @@ vectors of the same length.}
 Generate bined matrix given vectors of a random field.
 }
 \examples{
-vbingrid(seq(1:20), seq(21:30), runif(20), na=0)
+\dontrun{
+vbingrid(seq(1:20), seq(21:40), runif(20), na=0)
+}
 }
 \seealso{
 Other converting functions: \code{\link{rangebinc}};
